@@ -8,10 +8,19 @@ const Main = () => {
   return (
     <>
       <Header />
-      <div className="prepare-exercise">
-        잠깐! 운동하기 전에 준비운동은 필수!
-      </div>
-      <article className="container exercise-box">
+      <section>
+        <img alt="" className="main-img"></img>
+        <h2 className="main-pg-title">운동을 제대로 시작해 본적이 있나요?</h2>
+      </section>
+
+      <section>
+        <img alt="" className="main-img2"></img>
+        <h2 className="main-pg-title2">하나씩 차근차근 시작해봐요!</h2>
+      </section>
+
+      <img alt="" className="main-img3"></img>
+
+      <article className="exercise-box">
         <div className="exercise-wrapper container ">
           <section
             className="exercise-container1"
@@ -34,7 +43,12 @@ const Main = () => {
             </section>
           </section>
 
-          <section className="exercise-container1 ">
+          <section
+            className="exercise-container1"
+            onClick={() => {
+              navigate("/body");
+            }}
+          >
             <div className="exercise-title">등 운동</div>
             <img
               className="exercise-img"
@@ -50,7 +64,12 @@ const Main = () => {
             </section>
           </section>
 
-          <section className="exercise-container1 ">
+          <section
+            className="exercise-container1"
+            onClick={() => {
+              navigate("/chest");
+            }}
+          >
             <div className="exercise-title">가슴 운동</div>
             <img
               className="exercise-img"
@@ -66,7 +85,12 @@ const Main = () => {
             </section>
           </section>
 
-          <section className="exercise-container1">
+          <section
+            className="exercise-container1"
+            onClick={() => {
+              navigate("/lower");
+            }}
+          >
             <div className="exercise-title">하체 운동</div>
             <img
               className="exercise-img"
